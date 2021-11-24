@@ -1,0 +1,51 @@
+@import "variables";
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  padding: 5px;
+  background: $secondary-color;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px #00000022;
+}
+
+.button {
+  padding: 2px 5px;
+  background: transparent;
+  color: $primary-text-color;
+  border: 1px solid $primary-text-color;
+  border-radius: 3px;
+
+  &--secondary {
+    border-color: $secondary-text-color;
+    color: $secondary-color;
+  }
+
+  &--icon {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+  }
+
+  &--circle {
+    border-radius: 50%;
+  }
+}
+
+.input {
+  background: transparent;
+  border: 1px solid $primary-text-color;
+  border-radius: 3px;
+  width: 100%;
+  padding: 3px 5px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}

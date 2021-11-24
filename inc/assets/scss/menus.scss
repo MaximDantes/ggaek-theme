@@ -1,0 +1,71 @@
+@import "variables";
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+
+  .menu-item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 10px 5px;
+    }
+
+    &:hover {
+      background: #ffffff22;
+
+      .sub-menu {
+        display: block;
+        background: $secondary-color;
+      }
+    }
+  }
+
+  .sub-menu {
+    width: 100%;
+    position: absolute;
+    display: none;
+    color: $primary-text-color;
+    background: $secondary-color;
+
+    .menu-item {
+      text-align: left;
+
+      &:hover {
+      background: #7171ff44;
+      color: $secondary-text-color;
+      }
+    }
+  }
+}
+
+.cards-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  .menu-item {
+    padding: 5px;
+    background: $secondary-color;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px #00000022;
+    text-align: center;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 15px 0;
+    }
+
+    img {
+      max-width: 100px;
+      padding: 0;
+    }
+  }
+}

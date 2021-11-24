@@ -1,0 +1,16 @@
+@import "variables";
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.home-posts, .home-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+  overflow: hidden;
+}
