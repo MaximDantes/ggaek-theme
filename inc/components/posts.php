@@ -1,19 +1,32 @@
 <?php
 
-function posts($count, $category_id)
+function posts($count, $category_id, $use_pagination = false)
 {
     global $post;
 
-    $posts = get_posts([
-        'posts_per_page' => $count,
-        'category_name' => $category_id,
-    ]);
-    ?>
-    <section class="posts">
-        <?php
+    $page_ID = get_the_ID();
 
-        foreach ($posts as $post) {
-            setup_postdata($post);
+    $page = get_query_var('page');
+
+    $args = array(
+        'post_type' => array('post', 'book', 'movie'), // post types
+        'posts_per_page' => $count,
+        'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
+    );
+
+    if (is_front_page())
+        $args['paged'] = $page;
+
+    $custom_query = new WP_Query($args);
+
+    if ($custom_query->have_posts()) :
+        ?>
+
+        <div class="posts">
+
+        <?php
+        while ($custom_query->have_posts()) :
+            $custom_query->the_post();
             ?>
 
             <div class="posts-item card-wrapper">
@@ -46,10 +59,32 @@ function posts($count, $category_id)
                     </div>
                 </div>
             </div>
-            <?php
-        }
-        wp_reset_postdata();
+
+        <?php
+        endwhile;
         ?>
-    </section>
-    <?php
+
+        </div>
+
+        <?php
+
+        if ($use_pagination) {
+            $pagination_args = array(
+                'prev_text' => __('<', 'theme-domain'),
+                'next_text' => __('>', 'theme-domain'),
+                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'theme-domain') . ' </span>'
+            );
+
+            if (!is_front_page() && 0 < intval($page))
+                $pagination_args['base'] = user_trailingslashit(
+                    untrailingslashit(get_page_link($page_ID)) . '/page/%#%'
+                );
+
+            $GLOBALS['wp_query'] = $custom_query;
+
+            the_posts_pagination($pagination_args);
+        }
+    endif;
+
+    wp_reset_query();
 }

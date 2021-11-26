@@ -27,12 +27,13 @@
 
   &--icon {
     padding: 0;
-    width: 25px;
-    height: 25px;
   }
 
   &--circle {
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
+    padding: 0;
   }
 }
 
@@ -48,4 +49,18 @@
   font-size: 22px;
   font-weight: 500;
   text-align: center;
+}
+
+.cropped-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
 }

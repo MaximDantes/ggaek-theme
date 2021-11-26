@@ -49,22 +49,22 @@
                 <div class="header-middle__buttons">
                     <button class="button button--icon button--circle">
                         <a href="<?= get_option('contacts_vk') ?>" target="_blank" rel="nofollow">
-                            <i class="fa">VK</i>
+                            <i class="fab fa-vk"></i>
                         </a>
                     </button>
                     <button class="button button--icon button--circle">
                         <a href="<?= get_option('contacts_instagram') ?>" target="_blank" rel="nofollow">
-                            <i class="fa">VK</i>
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </button>
                     <button class="button button--icon button--circle">
                         <a href="<?= get_option('contacts_telegram') ?>" target="_blank" rel="nofollow">
-                            <i class="fa">VK</i>
+                            <i class="fab fa-telegram-plane"></i>
                         </a>
                     </button>
                     <button class="button button--icon button--circle">
                         <a href="<?= get_option('contacts_youtube') ?>" target="_blank" rel="nofollow">
-                            <i class="fa">VK</i>
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </button>
                 </div>
@@ -74,17 +74,17 @@
                 </div>
 
                 <div class="header-middle__buttons">
-                    <button class="button button--icon button--circle">
-                        <i class="fa">VK</i>
+                    <button class="button button--circle">
+                        RU
+                    </button>
+                    <button class="button button--circle">
+                        BL
+                    </button>
+                    <button class="button button--circle">
+                        EN
                     </button>
                     <button class="button button--icon button--circle">
-                        <i class="fa">VK</i>
-                    </button>
-                    <button class="button button--icon button--circle">
-                        <i class="fa">VK</i>
-                    </button>
-                    <button class="button button--icon button--circle">
-                        <i class="fa">VK</i>
+                        <i class="fas fa-glasses"></i>
                     </button>
                 </div>
             </div>

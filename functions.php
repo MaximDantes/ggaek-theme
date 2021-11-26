@@ -17,6 +17,7 @@ add_filter( 'excerpt_length', function(){
 function theme_scripts()
 {
     wp_enqueue_style('swiper_css', 'https://unpkg.com/swiper@7/swiper-bundle.min.css');
+    wp_enqueue_style('fa_css', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
     wp_enqueue_style('index_css', get_template_directory_uri() . '/inc/css/index.min.css');
 
     wp_enqueue_script('swiper_js', 'https://unpkg.com/swiper@7/swiper-bundle.min.js');
