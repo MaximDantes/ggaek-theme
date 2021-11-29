@@ -1,15 +1,8 @@
-@import "nullstyle";
 @import "variables";
-
-@import "header";
-@import "footer";
-@import "home";
-@import "posts";
-@import "our-proud";
-@import "pagination";
 
 body {
   color: $primary-text-color;
+  background: url("../images/bg.jpg");
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

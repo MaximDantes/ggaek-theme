@@ -27,7 +27,7 @@ function our_proud()
                     ?>
                     <div class="swiper-slide">
                         <div class="our-proud-item">
-                            <div class="our-proud-item__image">
+                            <div class="our-proud-item__image cropped-image">
                                 <img src="<?= get_post_meta($post->ID, 'image', true)['guid'] ?>" alt="photo">
                             </div>
 

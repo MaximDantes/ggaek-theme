@@ -20,8 +20,7 @@
             </div>
 
             <div class="header-top__auth">
-                <button class="button button--secondary">Вход</button>
-                <button class="button button--secondary">Регистрация</button>
+                <?php require_once 'inc/components/auth-buttons.php'?>
             </div>
         </div>
 
@@ -73,16 +72,9 @@
                     <input class="input" type="text" placeholder="Поиск..."/>
                 </div>
 
-                <div class="header-middle__buttons">
-                    <button class="button button--circle">
-                        RU
-                    </button>
-                    <button class="button button--circle">
-                        BL
-                    </button>
-                    <button class="button button--circle">
-                        EN
-                    </button>
+                <div class="header-middle__settings">
+                    <?= do_shortcode('[gtranslate]'); ?>
+
                     <button class="button button--icon button--circle">
                         <i class="fas fa-glasses"></i>
                     </button>
@@ -101,3 +93,15 @@
     </div>
 </header>
 <main class="container">
+    <?php
+    if (function_exists('bcn_display')) {
+    if (!is_front_page()) { ?>
+
+    <div class="breadcrumbs">
+        <?php bcn_display(); ?>
+    </div>
+
+<?php
+}
+}
+?>

@@ -10,7 +10,9 @@ require_once 'inc/components/outer-links.php'
 
 <?php get_header() ?>
 
-    <?php slider() ?>
+<?php slider() ?>
+
+<?php if (is_user_role('author')) { ?>
 
     <div class="cards">
         <?php wp_nav_menu([
@@ -19,17 +21,16 @@ require_once 'inc/components/outer-links.php'
         ]) ?>
     </div>
 
+<?php } ?>
+
     <div class="home-grid">
-
-
         <div class="home-posts">
-            <h2 class="title">НОВОСТИ</h2>
-            <?php posts(5, 0, false) ?>
+            <div class="title"><h2>НОВОСТИ</h2></div>
+            <?php posts() ?>
         </div>
 
-
         <aside class="home-aside">
-            <h2 class="title">НАША ГОРДОСТЬ</h2>
+            <div class="title"><h2>НАША ГОРДОСТЬ</h2></div>
             <?php our_proud() ?>
 
             <?php outer_links() ?>

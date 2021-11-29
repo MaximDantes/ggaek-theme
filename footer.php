@@ -1,4 +1,7 @@
 </main>
+
+<?php require_once 'inc/components/auth-modal.php'?>
+
 <footer class="footer">
 
     <div class="footer-top container">

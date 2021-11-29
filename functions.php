@@ -1,5 +1,19 @@
 <?php
 
+function is_user_role($role)
+{
+    $user = wp_get_current_user();
+
+    var_dump($user->roles);
+
+    $user = is_numeric($user->ID) ? get_userdata($user->ID) : wp_get_current_user();
+
+    if (!$user)
+        return false;
+
+    return in_array($role, (array)$user->roles);
+}
+
 add_action('after_setup_theme', function () {
     register_nav_menu('main_menu', 'Главное меню');
     register_nav_menu('cards_menu', 'Карточки');
@@ -9,9 +23,9 @@ add_action('after_setup_theme', function () {
 add_filter('excerpt_more', function () {
     return ' ...';
 });
-add_filter( 'excerpt_length', function(){
+add_filter('excerpt_length', function () {
     return 25;
-} );
+});
 
 
 function theme_scripts()

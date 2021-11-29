@@ -1,5 +1,9 @@
 @import "variables";
 
+.hidden {
+  display: none !important;
+}
+
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -48,7 +52,12 @@
 .title {
   font-size: 22px;
   font-weight: 500;
-  text-align: center;
+
+  h2 {
+    width: fit-content;
+    padding: 5px 0;
+    border-bottom: 1px solid $primary-text-color;
+  }
 }
 
 .cropped-image {
@@ -63,4 +72,8 @@
     transform: translate(-50%, -50%);
     object-fit: cover;
   }
+}
+
+.breadcrumbs {
+  padding: 10px 0;
 }

@@ -22,3 +22,19 @@ const ourProud = new Swiper('.our-proud__swiper', {
     slidesPerView: 1,
     loop: true,
 });
+
+const signInButtons = document.querySelectorAll('.sign-in-button')
+const signUpButtons = document.querySelectorAll('.sign-up-button')
+const authModal = document.querySelector('.modal')
+
+signInButtons.forEach(item => {
+    item.addEventListener('click', () => {
+        authModal.classList.remove('hidden')
+    })
+})
+
+authModal.addEventListener('click', (e) => {
+    if (e.currentTarget === e.target) {
+        authModal.classList.add('hidden')
+    }
+})

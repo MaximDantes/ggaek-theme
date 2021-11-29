@@ -27,6 +27,8 @@
   }
 
   &-middle {
+    background: $secondary-color;
+
     &__content {
       padding-top: 5px;
       padding-bottom: 5px;
@@ -74,6 +76,11 @@
       gap: 5px;
       justify-content: center;
       align-items: end;
+    }
+
+    &__settings {
+      display: flex;
+      gap: 5px;
     }
   }
 
