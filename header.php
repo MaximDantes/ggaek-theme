@@ -20,7 +20,7 @@
             </div>
 
             <div class="header-top__auth">
-                <?php require_once 'inc/components/auth-buttons.php'?>
+                <?php require 'inc/components/auth-buttons.php'?>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="header-middle__search">
-                    <input class="input" type="text" placeholder="Поиск..."/>
+                    <?php get_search_form() ?>
                 </div>
 
                 <div class="header-middle__settings">

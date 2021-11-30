@@ -23,6 +23,7 @@
       display: flex;
       gap: 5px;
       justify-content: right;
+      align-items: center;
     }
   }
 
@@ -81,6 +82,13 @@
     &__settings {
       display: flex;
       gap: 5px;
+    }
+
+    &__search {
+      form {
+        display: flex;
+        gap: 5px;
+      }
     }
   }
 

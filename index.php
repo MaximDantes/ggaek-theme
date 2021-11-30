@@ -12,7 +12,7 @@ require_once 'inc/components/outer-links.php'
 
 <?php slider() ?>
 
-<?php if (is_user_role('author')) { ?>
+<?php if(is_user_role('administrator')) { ?>
 
     <div class="cards">
         <?php wp_nav_menu([
@@ -22,6 +22,7 @@ require_once 'inc/components/outer-links.php'
     </div>
 
 <?php } ?>
+
 
     <div class="home-grid">
         <div class="home-posts">

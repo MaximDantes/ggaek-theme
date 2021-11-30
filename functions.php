@@ -4,8 +4,6 @@ function is_user_role($role)
 {
     $user = wp_get_current_user();
 
-    var_dump($user->roles);
-
     $user = is_numeric($user->ID) ? get_userdata($user->ID) : wp_get_current_user();
 
     if (!$user)
@@ -18,6 +16,13 @@ add_action('after_setup_theme', function () {
     register_nav_menu('main_menu', 'Главное меню');
     register_nav_menu('cards_menu', 'Карточки');
 });
+
+
+function auto_redirect_after_logout(){
+    wp_safe_redirect( home_url() );
+    exit;
+}
+add_action('wp_logout','auto_redirect_after_logout');
 
 
 add_filter('excerpt_more', function () {

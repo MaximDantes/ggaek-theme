@@ -29,13 +29,16 @@ function slider()
 
                     <div class="swiper-slide">
                         <div class="slider__item">
-                            <div class="slider__image cropped-image">
-                                <img src="<?= get_post_meta($post->ID, 'image', true)['guid'] ?>" alt="photo">
-                            </div>
+                            <a href="<?= get_post_meta($post->ID, 'link', true) ?>"
+                               target="_blank" rel="nofollow">
+                                <div class="slider__image cropped-image">
+                                    <img src="<?= get_post_meta($post->ID, 'image', true)['guid'] ?>" alt="photo">
+                                </div>
 
-                            <div class="slider__background"
-                                 style="background: url('<?= get_post_meta($post->ID, 'image', true)['guid']?>')">
-                            </div>
+                                <div class="slider__background"
+                                     style="background: url('<?= get_post_meta($post->ID, 'image', true)['guid'] ?>')">
+                                </div>
+                            </a>
                         </div>
                     </div>
 

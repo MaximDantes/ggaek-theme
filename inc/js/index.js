@@ -25,16 +25,29 @@ const ourProud = new Swiper('.our-proud__swiper', {
 
 const signInButtons = document.querySelectorAll('.sign-in-button')
 const signUpButtons = document.querySelectorAll('.sign-up-button')
-const authModal = document.querySelector('.modal')
+const logInModal = document.querySelector('.log-in-modal')
+const signUpModal = document.querySelector('.sign-up-modal')
 
-signInButtons.forEach(item => {
+signUpButtons.forEach(item => {
     item.addEventListener('click', () => {
-        authModal.classList.remove('hidden')
+        signUpModal.classList.remove('hidden')
     })
 })
 
-authModal.addEventListener('click', (e) => {
+signInButtons.forEach(item => {
+    item.addEventListener('click', () => {
+        logInModal.classList.remove('hidden')
+    })
+})
+
+logInModal.addEventListener('click', (e) => {
     if (e.currentTarget === e.target) {
-        authModal.classList.add('hidden')
+        logInModal.classList.add('hidden')
+    }
+})
+
+signUpModal.addEventListener('click', (e) => {
+    if (e.currentTarget === e.target) {
+        signUpModal.classList.add('hidden')
     }
 })

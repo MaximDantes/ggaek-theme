@@ -1,6 +1,6 @@
 </main>
 
-<?php require_once 'inc/components/auth-modal.php'?>
+<?php require_once 'inc/components/modals.php'?>
 
 <footer class="footer">
 
@@ -33,9 +33,11 @@
     </div>
 
     <div class="footer-bottom container">
-
+        <?php require 'inc/components/auth-buttons.php'?>
     </div>
 </footer>
+
 <?php wp_footer(); ?>
+
 </body>
 </html>
