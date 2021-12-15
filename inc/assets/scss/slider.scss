@@ -1,3 +1,5 @@
+@import "variables";
+
 .slider {
   overflow: hidden;
   position: relative;
@@ -20,7 +22,7 @@
     filter: blur(20px);
     background-size: contain !important;
   }
-  
+
   .swiper-button-prev, .swiper-button-next {
     &:after {
       color: #ffffffaa;
@@ -29,5 +31,32 @@
 
   .swiper-pagination-bullet-active {
     background-color: #ffffffaa;
+  }
+}
+
+@media (max-width: $lg) {
+  .slider {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &__image {
+      height: 33vw;
+
+      img {
+        height: 33vw;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .slider {
+    &__image {
+      height: 45vw;
+
+      img {
+        height: 45vw;
+      }
+    }
   }
 }

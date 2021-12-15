@@ -13,8 +13,9 @@ $selected_category = intval($_GET['category']);
 $categories = get_categories();
 ?>
 
+<section class="posts-page">
     <form method="get" action="./">
-        <select name="category" value="2" onchange='this.form.submit()'>
+        <select class="posts-page__category input" name="category" value="2" onchange='this.form.submit()'>
             <option value="0" <?php if ($selected_category == 0) echo 'selected'?>>Все</option>
 
             <?php
@@ -32,6 +33,7 @@ $categories = get_categories();
 
         </select>
     </form>
+</section>
 
 <?php posts(5, $selected_category, true); ?>
 

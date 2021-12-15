@@ -8,7 +8,9 @@
 
 <section class="page">
 
-<?php the_content() ?>
+    <div class="page__content card-wrapper">
+        <?php the_content() ?>
+    </div>
 
 </section>
 

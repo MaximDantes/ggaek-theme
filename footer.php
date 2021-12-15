@@ -1,6 +1,7 @@
+</div>
 </main>
 
-<?php require_once 'inc/components/modals.php'?>
+<?php require_once 'inc/components/modals.php' ?>
 
 <footer class="footer">
 
@@ -28,12 +29,20 @@
 
         <div class="footer-map">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A399e3064b3e7870c8820ecd2c0236e83ef67cae63b1d84e784b5d639de121edd&amp;source=constructor"
-                    width="100%" height="220" frameborder="0"></iframe>
+                    width="100%" height="260" frameborder="0"></iframe>
         </div>
     </div>
 
     <div class="footer-bottom container">
-        <?php require 'inc/components/auth-buttons.php'?>
+        <div></div>
+
+        <div class="footer-bottom__title">
+            © 2021 Учреждение образования «Гомельский государственный аграрно-экономический колледж»
+        </div>
+
+        <div class="footer-bottom__auth">
+            <?php require 'inc/components/auth-buttons.php' ?>
+        </div>
     </div>
 </footer>
 

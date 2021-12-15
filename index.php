@@ -12,16 +12,12 @@ require_once 'inc/components/outer-links.php'
 
 <?php slider() ?>
 
-<?php if(is_user_role('administrator')) { ?>
-
     <div class="cards">
         <?php wp_nav_menu([
             'theme_location' => 'cards_menu',
             'menu_class' => 'cards-menu',
         ]) ?>
     </div>
-
-<?php } ?>
 
 
     <div class="home-grid">
@@ -31,8 +27,12 @@ require_once 'inc/components/outer-links.php'
         </div>
 
         <aside class="home-aside">
-            <div class="title"><h2>НАША ГОРДОСТЬ</h2></div>
-            <?php our_proud() ?>
+            <div class="home-aside__proud">
+                <div class="title">
+                    <h2>НАША ГОРДОСТЬ</h2>
+                </div>
+                <?php our_proud() ?>
+            </div>
 
             <?php outer_links() ?>
         </aside>

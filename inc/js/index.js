@@ -51,3 +51,43 @@ signUpModal.addEventListener('click', (e) => {
         signUpModal.classList.add('hidden')
     }
 })
+
+
+const mobileMenuContent = document.querySelector('.header-mobile-menu__content')
+const mobileMenuButton = document.querySelector('.header-mobile-menu__button')
+const subMenus = mobileMenuContent.querySelectorAll('.sub-menu')
+const mobileMenuItems = mobileMenuContent.querySelectorAll('.menu-item')
+
+mobileMenuItems.forEach(item => {
+    if (item.classList.contains('menu-item-has-children')) {
+        item.children[0].classList.add('has-children')
+        item.children[1].classList.add('hidden-height')
+
+        item.addEventListener('click', e => {
+            if (e.target.classList.contains('has-children')) {
+                e.preventDefault()
+                item.children[1].classList.toggle('hidden-height')
+            }
+        })
+    }
+})
+
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenuContent.classList.toggle('hidden-height')
+})
+
+
+const albumPhoto = document.querySelector('.album-photo')
+const showImage = (path) => {
+    console.log(path)
+    albumPhoto.children[0].src = path
+    albumPhoto.classList.remove('hidden')
+}
+
+albumPhoto.addEventListener('click', (e) => {
+    if (e.currentTarget === e.target) {
+        albumPhoto.classList.add('hidden')
+    }
+})
+

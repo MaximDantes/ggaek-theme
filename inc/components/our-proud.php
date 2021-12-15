@@ -2,6 +2,7 @@
 
 function our_proud()
 {
+    //TODO image proportions
     global $post;
 
     $posts = get_posts([

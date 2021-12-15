@@ -30,7 +30,7 @@ function posts($count = 5, $category_id = 0, $use_pagination = false)
                 ?>
 
                 <div class="posts-item card-wrapper">
-                    <div class="posts-item__image">
+                    <div class="posts-item__image cropped-image">
                         <img src="<?= get_post_meta($post->ID, 'image', true)['guid'] ?>" alt="photo">
                     </div>
 

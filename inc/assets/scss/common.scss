@@ -4,6 +4,11 @@
   display: none !important;
 }
 
+.hidden-height {
+  overflow: hidden;
+  max-height: 0;
+}
+
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -19,14 +24,15 @@
 
 .button {
   padding: 2px 5px;
-  background: transparent;
-  color: $primary-text-color;
-  border: 1px solid $primary-text-color;
+  background: $accent-color;
+  color: rgba($secondary-text-color, 0.9);
+  border: 1px solid $accent-color;
   border-radius: 3px;
 
   &--secondary {
-    border-color: $secondary-text-color;
-    color: $secondary-color;
+    background: transparent;
+    border-color: rgba($secondary-text-color, 0.9);
+    color: rgba($secondary-text-color, 0.9);
   }
 
   &--icon {
@@ -50,9 +56,9 @@
 
 .title {
   font-size: 22px;
-  font-weight: 500;
 
   h2 {
+    font-weight: 500;
     width: fit-content;
     padding: 5px 0;
     border-bottom: 1px solid $primary-text-color;

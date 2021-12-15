@@ -1,0 +1,36 @@
+@import "variables";
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  border: 1px solid $primary-text-color;
+
+  input {
+    border: 0;
+    width: 100%;
+  }
+
+  button {
+    border: 0;
+  }
+}
+
+.search-results {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 10px;
+
+  &-item {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .search-form {
+    width: 100%;
+  }
+}
